@@ -93,7 +93,7 @@ Methods:
 - profileUpload() (optional if producers can input to site TBD) 
 
 Notes: 
-//reviews from local users ability to attach to producer profile 
+//review property - local users ability to attach to producer profile (TBD) 
 
 class Producers() {
           constructor (bizName, location, contact, products) {
@@ -128,18 +128,28 @@ Methods:
 - saveForLater()
 
 class Map() {
-          constructor (bizLocation, userLocation, products, type of farm, ) {
-              this.bizName = bizName;
-              this.location = location; 
+          constructor (bizLocation, userLocation, contact, products, farmType) {
+              this.bizLocation = bizLocation;
+              this.userLocation = userLocation; 
               this.contact = contact; 
               this.products = products; 
+              this.farmType = farmType; 
               }
               
            searchFor() {
+           //functions runs loop over items to display results that match search 
+           
            }
+           
            milesAway() {
+           //functions calculates the distance the user is from the producer 
+           //fun fact: learned haverine forumla for the way the crow flies (straight) vs Wolphram Alpha for driving route calculations 
+           
            }
+           
            saveForLater() {
+           //functions allows user to save producer search result for later access 
+           
            }
                     }
                     
