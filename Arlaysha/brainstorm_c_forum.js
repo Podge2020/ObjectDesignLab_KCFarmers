@@ -3,11 +3,20 @@
 
 class Forum {
     constructor (){
-    this.user = 
-    this.chat = 
-    this.thread = 
-    this.post = 
-    this.timestamp
-    }
+    this.user = null;
+    this.chat = null;
+    this.thread = null;
+    this.post = null;
+    this.timestamp= null;
+    };
     
-}
+
+//add user to have forum access
+addUser () {
+
+};
+
+//remove user from forum
+removeUser () {
+
+};
