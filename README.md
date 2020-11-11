@@ -1,5 +1,7 @@
 # ObjectDesignLab_KCFarmers
 
+BY: Arlaysha Osborn, Monique Smith, Daniel McLain?, Paige Walters
+
 What are the major entities for your objects? Who needs to access them?
 
 - Major entities: Users, Producers, Location of User, Location of Producer, Products, Event Offerings (location, date, time, contact information) 
