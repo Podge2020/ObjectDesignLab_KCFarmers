@@ -77,6 +77,7 @@ class Users() {
          logOut() {
               //log-out
          }
+         }
          
 
 - Producer/Growers/Farmers for Map 
@@ -110,7 +111,7 @@ class Producers() {
          logOut() {
               //log-out
          }
-
+            }
 
 - Map
 //search result of choices from filters 
@@ -140,7 +141,8 @@ class Map() {
            }
            saveForLater() {
            }
-
+                    }
+                    
 - Calendar 
 Properties: 
 event titles     : string
@@ -154,6 +156,12 @@ class Event() {
               this.date = date;
               this.location = location;  
               this.sponsor = sponsor; 
+              }
+              
+              addEvent(){
+              }
+              removeEvent(){
+              }
               }
 
 
