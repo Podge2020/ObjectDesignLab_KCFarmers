@@ -30,6 +30,9 @@ var Calendar = new Schema({
 
 
 //Producer Schema - includes name, 
+/* PW Using JSON in MongoDB is beneficial because of its flexibility further down the line 
+as we continue devloping this idea. With the use of objects you can make changes to smaller pieces
+easier than if you were using XML in a relational database */
 var Producer = new Schema({
     name: {​​​​​​​type: String}​​​​​​​,
     location: {​​​​​​​type: String}​​​​​​​,
@@ -39,6 +42,6 @@ var Producer = new Schema({
 /* Also in the code comments, 
 for at least one Schema per person, 
 discuss what the pros and cons 
-of developing the documents in XML in a r
-elational database vs JSON/BSON in MongoDB would be/are. */
+of developing the documents in XML in a 
+relational database vs JSON/BSON in MongoDB would be/are. */
 
