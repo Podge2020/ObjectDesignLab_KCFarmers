@@ -31,9 +31,10 @@ var Calendar = new Schema({
 
 //Producer Schema - includes name, 
 /* PW Using JSON in MongoDB is beneficial because of its flexibility further down the line 
-as we continue devloping this idea. With the use of objects you can make changes to smaller pieces
-easier than if you were using XML in a relational database; with the ease in changes of JSON this allows 
-us to loosely build out our idea before knowing exactly how we want farmers/producers to be highlights through the application */
+as we continue developing this idea. With the use of objects you can make changes to smaller pieces
+easier than if you were using XML in a relational database where you would be limited in accessing sections of tables; 
+with the ease in changes of JSON this allows us to loosely build out our idea before knowing 
+exactly how we want farmers/producers to be highlights through the application. */
 var Producer = new Schema({
     name: {​​​​​​​type: String}​​​​​​​,
     location: {​​​​​​​type: String}​​​​​​​,
