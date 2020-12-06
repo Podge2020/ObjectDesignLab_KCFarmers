@@ -4,17 +4,19 @@ const mongoose = require('mongoose');
 //creating a variable that can be reused to make mongoose schema possible 
 const Schema = mongoose.Schema;  
 
-//creates NEW schemas 
-
-//create schema for all inputs to map  
+//create schema for PRODUCERS on map  
 const producerSchema = new Schema({
+
+    //properties to FILTER SEARCH W/
     producerBizName : String, 
-    products : { /* productCategorySchemas go here so can reference ObjectIds to connect all LIKE products among ALL producers? */ }, 
-    location : String, /* Address */
+    products : { }, /* product.js reference here: ObjectIds to connect all SAME products among ALL producers */
+    location : String, /* Address include ZIPCODE for comparison use */
+    purchaseOpts : [ ], /* Options: Direct from farm ways, Online, CSA orders, Farmer's Market, Stores listed */
+
+    //properties to CONNECT TO FARMER W/
     contactLink : String, /* URL to farmer's site */
     contactPhone : String, /* cannot use Numbers with MongoDB for phone number (will add .000000 to end of it), StackOverflow to remember here: https://stackoverflow.com/questions/32272410/how-to-store-data-as-type-number-in-mongodb-using-sails-js */
     contactSocial : String, /* URL to farmer's Social Media site, possibly array of multiples */
-    whereToBuy : [ /* Options: Direct from farm ways (online, CSA orders), Farmer's Market, Store */]
     
     //properties below listed as additional ideas that need more development: 
     closeBy : Boolean, /* Save as true/false using variable to compare user distance to Biz distance to track if users desired area (thinking using zip code would be easier than miles, have to consider how the crow flies otherwise...woof)*/
@@ -31,4 +33,4 @@ const producerSchema = new Schema({
 // HOW to make the map function idea: if every producer was an object that had a symbol on the map SHOWING true at first so see ALL then you could run search() function so that javescript makes producers that DO NOT match NOT display on the map for results 
 
 
-module.exports = mongoose.model("Input", inputSchema);
+module.exports = mongoose.model("producer", producerSchema);

@@ -27,7 +27,7 @@ var Calendar = new Schema({
         description: {​​​​​​​type: String}​​​​​​​,
         dates: {​​​​​​​type: Date}​​​​​​​,
         who: {​​​​​​​type: String}​​​​​​,
-
+}); 
 
 //Producer Schema - includes name, 
 /* PW Using JSON in MongoDB is beneficial because of its flexibility further down the line 
@@ -39,7 +39,7 @@ var Producer = new Schema({
     name: {​​​​​​​type: String}​​​​​​​,
     location: {​​​​​​​type: String}​​​​​​​,
     produce: {​​​​​​​type: Array}​​​​​​​,
-})        
+});         
 
 /* Also in the code comments, 
 for at least one Schema per person, 
