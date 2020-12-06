@@ -13,6 +13,9 @@ const producerSchema = new Schema({
     location : String, /* Address include ZIPCODE for comparison use */
     purchaseOpts : [ ], /* Options: Direct from farm ways, Online, CSA orders, Farmer's Market, Stores listed */
 
+    //DELETE productType Schema, ADD: 
+    //productType : [ 'Vegetable', 'Fruit', 'Dairy', 'Meat', 'Herb', 'Honey', 'Farm2Table', 'etc' ]
+
     //properties to CONNECT TO FARMER W/
     contactLink : String, /* URL to farmer's site */
     contactPhone : String, /* cannot use Numbers with MongoDB for phone number (will add .000000 to end of it), StackOverflow to remember here: https://stackoverflow.com/questions/32272410/how-to-store-data-as-type-number-in-mongodb-using-sails-js */
