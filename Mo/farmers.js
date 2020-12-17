@@ -1,16 +1,17 @@
-class Event {
+class Event {                    //Create a new instance of an event//
     constructor (location, date, time=null, details){
+
       this.location = zipcode;
       this.date = date;
       this.time = time;
       this.details = details; 
     };
-    addEvent(){
+    addEvent(){                  //Adds new event to the calendar
 
     };
-    deleteEvent(){
+    deleteEvent(){                //Deletes event from the calendar
 
     };
   };
   
-  let date = new Date()
+  //Use Date() for calendar
