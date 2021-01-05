@@ -4,17 +4,16 @@ const mongoose = require('mongoose');
 //creating a variable that can be reused to make mongoose schema possible 
 const Schema = mongoose.Schema;  
 
-//creates NEW schemas 
-
-//create schema for 
+//create schema for MARKETS (WHERE) on map 
 const marketSchema = new Schema({
     marketName : String, 
     //WHAT 
     products : { /* Reference ObjectIds */ }, 
     productTypes : { }, 
+    farmers : { /* biz names listed */}
     
     //WHERE 
-    location : String, 
+    location : String, /* might be [] of multiple locations */
     
     //WHEN
     datesOpen : [], /* Unsure best way here, thought could use ref id to connect to Calendar too */
@@ -28,4 +27,4 @@ const marketSchema = new Schema({
   
 module.exports = mongoose.model("market", marketSchema);
 
-//Method to search by product will show results on map like it was a "farmer" 
+//Method to search by all markets to see every where can go buy fresh/local   
