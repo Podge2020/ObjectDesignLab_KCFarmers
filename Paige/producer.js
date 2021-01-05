@@ -4,14 +4,14 @@ const mongoose = require('mongoose');
 //creating a variable that can be reused to make mongoose schema possible 
 const Schema = mongoose.Schema;  
 
-//create schema for PRODUCERS on map  
+//create schema for PRODUCERS (WHO) on map  
 const producerSchema = new Schema({
 
     //properties to FILTER SEARCH W/
     producerBizName : String, 
     products : { }, /* product.js reference here: ObjectIds to connect all SAME products among ALL producers */
     location : String, /* Address include ZIPCODE for comparison use */
-    purchaseOpts : [ ], /* Options: Direct from farm ways, Online, CSA orders, Farmer's Market, Stores listed */
+    //purchaseOpts : [ ], /* Options: Direct from farm ways, Online, CSA orders, Farmer's Market, Stores listed */
 
     //DELETE productType Schema, ADD: 
     //productType : [ 'Vegetable', 'Fruit', 'Dairy', 'Meat', 'Herb', 'Honey', 'Farm2Table', 'etc' ]
@@ -22,13 +22,14 @@ const producerSchema = new Schema({
     contactSocial : String, /* URL to farmer's Social Media site, possibly array of multiples */
     
     //properties below listed as additional ideas that need more development: 
-    closeBy : Boolean, /* Save as true/false using variable to compare user distance to Biz distance to track if users desired area (thinking using zip code would be easier than miles, have to consider how the crow flies otherwise...woof)*/
-    marketFarmer : Boolean, /* DO they sell at a farmers market? IF true then array of local farmers markets they attend by referencing Local Farmer Markets Schema  */ 
-    organic : Boolean, /* True/False if certified organic */
-    CSA : Boolean, /* True/False if offer CSA boxes */
+    //closeBy : Boolean, /* Save as true/false using variable to compare user distance to Biz distance to track if users desired area (thinking using zip code would be easier than miles, have to consider how the crow flies otherwise...woof)*/
+    //marketFarmer : Boolean, /* DO they sell at a farmers market? IF true then array of local farmers markets they attend by referencing Local Farmer Markets Schema  */ 
+    //organic : Boolean, /* True/False if certified organic */
+    //CSA : Boolean, /* True/False if offer CSA boxes */
+    //reviews : [], /* log all reviews (ie Yelp) */
     
     //propertiees below not sure if possible or necessary to include: 
-    price : { type: Double, }, /* ??? Unsure about this one yet, feels repetitive with products and some won't have available - Object of Products with Prices also Data type to save decimal floating point numbers https://data-flair.training/blogs/mongodb-data-types/ */
+    //price : { type: Double, }, /* ??? Unsure about this one yet, feels repetitive with products and some won't have available - Object of Products with Prices also Data type to save decimal floating point numbers https://data-flair.training/blogs/mongodb-data-types/ */
 }); 
   
 // Method search() return new object of matching producers that shows on map 
