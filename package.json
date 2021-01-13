@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "launch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/Podge2020/ObjectDesignLab_KCFarmers/issues"
   },
-  "homepage": "https://github.com/Podge2020/ObjectDesignLab_KCFarmers#readme"
+  "homepage": "https://github.com/Podge2020/ObjectDesignLab_KCFarmers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "nodemon": "^2.0.7"
+  }
 }
