@@ -1,0 +1,33 @@
+{
+  "name": "show_me_your_plate_capstone_project",
+  "version": "1.0.0",
+  "description": "Software Development Capstone Project",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test",
+    "launch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Podge2020/ObjectDesignLab_KCFarmers.git"
+  },
+  "keywords": [
+    "node.js",
+    "api",
+    "portfolio"
+  ],
+  "author": "Arlaysha Osborn Paige Walters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Podge2020/ObjectDesignLab_KCFarmers/issues"
+  },
+  "homepage": "https://github.com/Podge2020/ObjectDesignLab_KCFarmers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "nodemon": "^2.0.7"
+  }
+}
