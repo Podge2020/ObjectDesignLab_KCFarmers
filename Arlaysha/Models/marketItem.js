@@ -7,7 +7,7 @@ const marketItemSchema = new Schema({
     
         marketName : String,
         marketTag : {type: String, enum:['Meat', 'Produce', 'Organic', 'Market']},
-        location : String,
+        address : String,
         seasonal : Boolean,
         marketID : Number,
         email : String,
