@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-var Producer = require('./models/producersPRAC.js'); 
+var Producer = require('./producerPRAC.js'); 
 //Load in the express module
 const express = require('express');  
 const path = require('path');
@@ -9,9 +9,9 @@ const app = express();
 //declare the port we want to connect to 
 const port = 3000; 
 
-const mongoDB = ''; 
+const mongoDB = 'mongodb+srv://Capstone:Farmer123@cluster0.8xd2d.mongodb.net/capstone?retryWrites=true&w=majority'; 
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true}, (err, client) => {
-    if(err) return console.error(err);
+    if(err) return console.error(err); 
     console.log('Connected to database'); 
 }); 
 const db = mongoose.connection;
@@ -39,19 +39,20 @@ var server = app.listen(port, function(){
 });
 app.get('/producers', function(request, response){
     /*get data*/ 
-    Producer.find(function(err, items){
-            if (err) return console.error(err);
-            response.statusCode = 200; 
-            response.send(items); 
-    })    
+    console.log(request.query); 
+    // Producer.find(function(err, items){
+    //         if (err) return console.error(err);
+    //         response.statusCode = 200; 
+    //         response.send(items); 
+    // })    
 }); 
         
-app.get('/producers/:prodcutType, function(request, response){
-    //do what we want on the server side
-    Producer.findById(request.params.productType, function(err, item){
-        if(err){ console.log(err); response.sendStatus(500); }
-        response.send(producer); 
-    }); 
-}); 
+// //app.get('/producers/:prodcutType, function(request, response){
+//     //do what we want on the server side
+//    Producer.findById(request.params.productType, function(err, item){
+//        if(err){ console.log(err); response.sendStatus(500); }
+//        response.send(producer); 
+//     }); 
+// }); 
 
 module.exports = server; 
