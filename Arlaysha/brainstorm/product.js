@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 //creating a variable that can be reused to make mongoose schema possible 
 const Schema = mongoose.Schema;  
 
-//creates NEW schemas 
-
-//create schema for ALL products 
+//create schema for ALL products (WHAT)
 const productSchema = new Schema({
     productName : String, 
     productType : {type: String, enum: ['Vegetable', 'Fruit', 'Dairy', 'Meat', 'Herb', 'Honey', 'Farm2Table', 'etc']}, 

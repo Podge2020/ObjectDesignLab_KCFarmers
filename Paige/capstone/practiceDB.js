@@ -19,4 +19,4 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 db.once('open', function(){
     //check terminal after command node fileName.js 
     console.log("We're connected");
-
+}); 
