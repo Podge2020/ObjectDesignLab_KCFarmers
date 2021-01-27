@@ -1,4 +1,29 @@
-// 1) document.getElementbyID() and attach to function for ON PAGE LOAD 
+// ON LOAD event listener here for home page
+
+// 1) document.getElementbyID() and attach to function for CLICK 
+document.getElementById('meat').addEventListener("click", function(event){
+    getMeat(); 
+
+    document.getElementById('produce').addEventListener("click", function(event){
+        getProduce(); 
+
+    document.getElementById('dairy').addEventListener("click", function(event){
+        getDairy(); 
+
+    document.getElementById('eggs').addEventListener("click", function(event){
+        getEggs(); 
+
+    document.getElementById('herbs').addEventListener("click", function(event){
+        getHerbs(); 
+
+    document.getElementById('honey').addEventListener("click", function(event){
+        getHoney(); 
+
+    document.getElementById('mushrooms').addEventListener("click", function(event){
+        getMushrooms(); 
+
+    document.getElementById('speciality').addEventListener("click", function(event){
+        getSpeciality(); 
 
 // 2) async/await include code for fetch calls happening when button is clicked 
 //endpoints used 
@@ -9,6 +34,7 @@
 /producers/eggs 
 /producers/herbs
 /producers/honey
+/producers/mushrooms
 /producers/speciality 
 */ 
 
@@ -115,13 +141,13 @@ async function getHoney(){
     return body; 
 }; 
 
-async function getMushroom(){
+async function getMushrooms(){
     let requestOptions = {
         method: "GET",
         headers : { "Content-Type": "application/json"} 
     }
 
-    const response = await fetch("/producer/mushroom", requestOptions); 
+    const response = await fetch("/producer/mushrooms", requestOptions); 
 
     //traverses the response object and pulls out the body content in the form of JSON 
     const body = await response.json(); 
